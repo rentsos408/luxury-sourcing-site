@@ -504,43 +504,101 @@
       color: rgba(255, 255, 255, 0.5);
     }
     
-    /* -----------------------------------
-       Responsive at 768px and below
-       ----------------------------------- */
-   /* 
-  1) Show hamburger + mobile nav up to 768px.
-  2) Hide them above 768px so they don't appear on desktop. 
-*/
+  /* -----------------------------------
+   Base / default nav styling (outside media queries)
+   ----------------------------------- */
 
-/* MOBILE-ONLY STYLES (up to 768px) */
-@media (max-width: 768px) {
-  /* Show the hamburger icon, hide the desktop nav (if any) */
-  .hamburger {
-    display: block; 
-  }
-  #mobile-menu {
-    /* It's toggled by JS, so normally display:none 
-       until the user clicks the hamburger. */
-  }
+/* Hide the menu by default (will appear on desktop in media queries) */
+#mobile-menu {
+  display: none;  /* toggled to block by JS or desktop rules */
+  position: absolute; /* for mobile dropdown */
+  right: 20px;
+  top: 60px;      /* adjust if your header is taller */
+  width: 200px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 999;   /* keep above other content */
 }
 
-/* DESKTOP-ONLY STYLES (from 769px up) */
-@media (min-width: 769px) {
-  /* Hide collapsible menu + hamburger on desktop */
-  #mobile-menu {
-    display: none !important;
-  }
-  .hamburger {
-    display: none !important;
-  }
-
-  /* If you also have an old desktop nav, you can show it here. 
-     e.g., 
-       nav.main-desktop-nav {
-         display: flex;
-       }
-  */
+/* Hide hamburger by default (we’ll show it on mobile) */
+.hamburger {
+  display: none;
+  font-size: 22px; 
+  cursor: pointer;
 }
+
+/* You can style the mobile-menu UL further if you want */
+#mobile-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+
+#mobile-menu ul li a {
+  display: block;
+  padding: 10px 0;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+      /* -----------------------------------
+         MOBILE-ONLY (up to 768px)
+         ----------------------------------- */
+      @media (max-width: 768px) {
+        /* Show hamburger on mobile */
+        .hamburger {
+          display: block; 
+        }
+      
+        /* Keep #mobile-menu hidden until user clicks hamburger 
+           (Your JS toggles display to 'block') */
+        #mobile-menu {
+          display: none; /* The JS changes it to block upon click */
+          position: absolute; 
+          top: 60px; 
+          right: 20px;
+          width: 200px;
+          background-color: #fff;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+      
+        /* If you had a separate “desktop nav,” you’d hide it here:
+           .desktop-nav { display: none; }
+        */
+      }
+      
+      /* -----------------------------------
+         DESKTOP-ONLY (from 769px up)
+         ----------------------------------- */
+      @media (min-width: 769px) {
+        /* Hide hamburger on desktop */
+        .hamburger {
+          display: none;
+        }
+      
+        /* Show the nav in a normal horizontal layout on desktop */
+        #mobile-menu {
+          display: block;       /* Always visible on desktop */
+          position: static;     /* No absolute positioning */
+          box-shadow: none;
+          background-color: transparent;
+          width: auto;
+        }
+      
+        #mobile-menu ul {
+          display: flex; 
+          gap: 30px;       /* space between links */
+          margin: 0;
+          padding: 0;
+        }
+      
+        #mobile-menu ul li a {
+          display: inline-block;
+          padding: 0;
+          color: var(--text-color);
+          text-decoration: none;
+        }
+      }
 
       .hero h1 {
         font-size: 32px;
