@@ -276,6 +276,15 @@
             position: relative;           /* So you can add an overlay if you want */
             z-index: 1; 
         }
+
+        /* Creates a tinted overlay behind your content */
+    .testimonials::before {
+      content: "";
+      position: absolute;
+      inset: 0;                 /* top:0; right:0; bottom:0; left:0; */
+      background-color: rgba(0, 0, 0, 0.2); /* or whatever color/opacity you need */
+      z-index: 1;
+    }
         
         .testimonials-intro {
             text-align: center;
