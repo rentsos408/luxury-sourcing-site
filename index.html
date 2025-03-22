@@ -268,7 +268,13 @@
         /* Testimonials Section */
         .testimonials {
             padding: 100px 0;
-            background-color: white;
+            /*background-color: white;*/
+             /* Add your background image properties: */
+            background: url('clienttestiony3.jpg') no-repeat center center;
+            background-size: cover;       /* Make sure the image covers the section */
+            background-attachment: fixed; /* Optional: keeps the background fixed while scrolling */
+            position: relative;           /* So you can add an overlay if you want */
+            z-index: 1; 
         }
         
         .testimonials-intro {
