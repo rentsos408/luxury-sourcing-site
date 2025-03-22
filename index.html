@@ -507,12 +507,40 @@
     /* -----------------------------------
        Responsive at 768px and below
        ----------------------------------- */
-    @media (max-width: 768px) {
-      /* Let hero adjust naturally; remove forced 100vh */
-      .hero {
-        min-height: auto;
-        padding: 60px 20px;
-      }
+   /* 
+  1) Show hamburger + mobile nav up to 768px.
+  2) Hide them above 768px so they don't appear on desktop. 
+*/
+
+/* MOBILE-ONLY STYLES (up to 768px) */
+@media (max-width: 768px) {
+  /* Show the hamburger icon, hide the desktop nav (if any) */
+  .hamburger {
+    display: block; 
+  }
+  #mobile-menu {
+    /* It's toggled by JS, so normally display:none 
+       until the user clicks the hamburger. */
+  }
+}
+
+/* DESKTOP-ONLY STYLES (from 769px up) */
+@media (min-width: 769px) {
+  /* Hide collapsible menu + hamburger on desktop */
+  #mobile-menu {
+    display: none !important;
+  }
+  .hamburger {
+    display: none !important;
+  }
+
+  /* If you also have an old desktop nav, you can show it here. 
+     e.g., 
+       nav.main-desktop-nav {
+         display: flex;
+       }
+  */
+}
 
       .hero h1 {
         font-size: 32px;
