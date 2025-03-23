@@ -169,9 +169,9 @@ nav ul li a:hover {
 }
 
 /* Add this rule */
-#mobile-menu.active {
-  display: block;
-}
+/*#mobile-menu.active {
+ /* display: block;*/
+/*}*/
 
 /* HERO */
 .hero {
