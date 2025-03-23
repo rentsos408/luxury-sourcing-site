@@ -256,13 +256,13 @@ nav ul li a:hover {
     display: none;
   }
 }
-.services-grid,
+      .services-grid,
       .process-steps,
       .testimonial-grid {
-        display: flex !important;
-        flex-direction: column !important;
+        display: grid !important;
+        fgrid-template-columns: 1fr;
         gap: 30px !important;
-      }
+ }
 /* HERO */
 .hero {
   min-height: 100vh;
