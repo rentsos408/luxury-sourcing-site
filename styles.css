@@ -156,7 +156,18 @@ nav ul li a:hover {
           display: none;
         }
       /* Show hamburger button */
+
+        .hamburger {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
         .contact-content {
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+        }
+        .process-content {
           display: flex;
           flex-direction: column;
           gap: 40px;
