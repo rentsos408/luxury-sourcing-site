@@ -144,7 +144,7 @@ nav ul li a:hover {
   transition: opacity 0.3s ease;
 }
 
-menu-overlay.active {
+.menu-overlay.active {
   opacity: 1;
   visibility: visible;
 }
@@ -237,7 +237,7 @@ menu-overlay.active {
           margin-bottom: 30px;
           padding-right: 0;
         }
-}
+
 }
 @media (min-width: 769px) {
   #mobile-menu, .menu-overlay {
