@@ -1,2 +1,2 @@
 # luxury-sourcing-site
-done by claude 
+with new look and logo
