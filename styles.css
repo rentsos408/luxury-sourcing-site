@@ -639,15 +639,19 @@ footer {
     padding: 0;
   }
 
-  /* MOBILE MENU FIX */
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
   #mobile-menu {
     display: none;
     position: absolute;
-    top: 70px; /* Adjust based on header height */
+    top: 60px; /* Adjust this value if your header height is different */
     right: 20px;
     width: 200px;
     background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0,
-
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999; /* Make sure it's on top */
+    padding: 10px;
+    /* Maybe add a max-height and overflow-y if you have many links */
+    /* max-height: 80vh;
+    overflow-y: auto; */
+  }
 }
