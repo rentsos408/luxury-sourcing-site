@@ -103,7 +103,8 @@ nav ul li a:hover {
   }
 
 /* MOBILE MENU (hidden by default, toggled by JS on mobile) */
-mobile-menu {
+/* Mobile Menu Styling */
+#mobile-menu {
   display: none; /* Hidden by default */
   position: fixed;
   top: 0;
@@ -148,7 +149,7 @@ mobile-menu {
 #mobile-menu ul li a:hover {
   color: var(--accent-color);
 }
-
+/* Add overlay for Apple-like darkening effect when menu is open */
 .menu-overlay {
   display: none;
   position: fixed;
