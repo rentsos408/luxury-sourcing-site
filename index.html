@@ -436,11 +436,10 @@
   </footer>
 
   <!-- Script: Toggling the Mobile Nav -->
-  <script>
-    function toggleNav() {
-      const nav = document.getElementById("mobile-menu");
-      nav.style.display = (nav.style.display === "block") ? "none" : "block";
-    }
-  </script>
+<script>
+  function toggleNav() {
+    document.getElementById('mobile-menu').classList.toggle('active');
+  }
+</script>
 </body>
 </html>
