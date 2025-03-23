@@ -224,16 +224,7 @@ nav ul li a:hover {
           flex-direction: column;
           gap: 40px;
         }
-        /* Single column for services, process, etc. */
-        .services-grid {
-          grid-template-columns: 1fr;
-        }
-        .process-steps {
-          grid-template-columns: 1fr;
-        }
-        .testimonial-grid {
-          grid-template-columns: 1fr;
-        }
+       
         /* Footer stacks columns */
         .footer-content {
           flex-direction: column;
