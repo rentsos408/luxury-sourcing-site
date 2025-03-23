@@ -1,3 +1,16 @@
+<nav class="navbar">
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="nav-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,33 +39,22 @@
     <div class="container header-container">
       <!-- Logo -->
       <div class="logo">RENTSOS408</div>
-      
-      <!-- Desktop Navigation -->
-      <nav class="navbar"> 
-        <ul class="nav-list">
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#process">Our Process</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
 
       <!-- Hamburger icon (appears on mobile) -->
       <div class="hamburger" onclick="toggleNav()" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </div>
+      <i class="fas fa-bars"></i>
+    </div>
 
-      <!-- Mobile Navigation -->
+      <!-- Collapsible Nav -->
       <nav id="mobile-menu">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#process">Our Process</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Our Process</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
     </div>
   </header>
 
@@ -92,12 +94,12 @@
         </p>
         <p>
           With multilingual expertise and a sharp eye for detail, we navigate
-          complex international markets to find what others can't.
+          complex international markets to find what others can’t.
         </p>
         <p>
           Whether you're furnishing a dream home, launching a high-end service,
           or relocating rare goods, we handle every aspect — sourcing,
-          customization, consolidation, and shipment — so you don't have to.
+          customization, consolidation, and shipment — so you don’t have to.
         </p>
         <p>At RENTSOS408, we don't move boxes. We move solutions.</p>
       </div>
@@ -271,7 +273,7 @@
         <div class="testimonial-card">
           <p class="testimonial-text">
             "I wanted a fully customized home automation and audio-visual
-            system. RENTSOS408 brought me options I didn't even know existed —
+            system. RENTSOS408 brought me options I didn’t even know existed —
             sourced, negotiated, and delivered with absolute precision."
           </p>
           <div class="client-info">
@@ -434,23 +436,10 @@
   </footer>
 
   <!-- Script: Toggling the Mobile Nav -->
-  <script>
-    function toggleNav() {
-      document.getElementById('mobile-menu').classList.toggle('active');
-    }
-
-    // Get all the links inside the mobile menu
-    const mobileLinks = document.querySelectorAll('#mobile-menu ul li a');
-
-    // Add an event listener to each link
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        // If the menu is open (has the 'active' class), close it
-        if (document.getElementById('mobile-menu').classList.contains('active')) {
-          document.getElementById('mobile-menu').classList.remove('active');
-        }
-      });
-    });
-  </script>
+<script>
+  function toggleNav() {
+    document.getElementById('mobile-menu').classList.toggle('active');
+  }
+</script>
 </body>
 </html>
