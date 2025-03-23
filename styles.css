@@ -115,6 +115,10 @@ nav ul li a:hover {
   color: var(--text-color);
   text-decoration: none;
 }
+/* Add this rule */
+#mobile-menu.active {
+  display: block;
+}
 
 /* HERO */
 .hero {
