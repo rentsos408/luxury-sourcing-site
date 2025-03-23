@@ -224,14 +224,7 @@ nav ul li a:hover {
         .footer-content {
           flex-direction: column;
         }
-          /* 👉 ADD THIS HERE 👇 */
-            .services-grid,
-            .process-steps,
-            .testimonial-grid {
-              display: grid;
-              grid-template-columns: 1fr;
-              gap: 30px;
-            }
+         
         .footer-column {
           margin-bottom: 30px;
           padding-right: 0;
