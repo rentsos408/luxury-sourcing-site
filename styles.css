@@ -5,7 +5,16 @@
   --text-color: #2C2C2C;
   --light-text: #F5F2EE;
 }
+.desktop-nav ul {
+  display: flex;
+  list-style: none;
+}
 
+@media (max-width: 768px) {
+  .desktop-nav ul {
+    display: none;
+  }
+}
 /* RESET & GLOBAL */
 * {
   margin: 0;
@@ -159,10 +168,8 @@ nav ul li a:hover {
       .services-grid,
       .process-steps,
       .testimonial-grid {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 30px !important;
-      }
+      grid-template-columns: 1fr !important;
+    }
       .process-step,
         .testimonial-card {
           width: 100%;
@@ -249,7 +256,13 @@ nav ul li a:hover {
     display: none;
   }
 }
-
+.services-grid,
+      .process-steps,
+      .testimonial-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 30px !important;
+      }
 /* HERO */
 .hero {
   min-height: 100vh;
