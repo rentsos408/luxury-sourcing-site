@@ -61,7 +61,7 @@ header {
 
 
 /* Desktop Navigation - visible on desktop only */
- nav ul {
+  nav ul {
   display: flex;
   list-style: none;
 }
@@ -85,7 +85,7 @@ nav ul li a:hover {
 }
 
 
-/* HAMBURGER mobile only 
+/* HAMBURGER mobile only */
   .hamburger {
   display: none;
   cursor: pointer;
@@ -131,7 +131,7 @@ nav ul li a:hover {
 }
 
 /* Overlay for mobile menu */
-.menu-overlay {
+ .menu-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -144,7 +144,7 @@ nav ul li a:hover {
   transition: opacity 0.3s ease;
 }
 
-.menu-overlay.active {
+  .menu-overlay.active {
   opacity: 1;
   visibility: visible;
 }
@@ -158,7 +158,7 @@ nav ul li a:hover {
         }
 
         /* Show hamburger button */
-        .hamburger {
+          .hamburger {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
