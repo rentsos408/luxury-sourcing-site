@@ -151,29 +151,23 @@ nav ul li a:hover {
 
 /* Mobile-specific adjustments */
 @media (max-width: 768px) {
-
         /* Hide desktop nav on mobile */
         nav ul {
           display: none;
         }
-  
       /* Show hamburger button */
         .contact-content {
           display: flex;
           flex-direction: column;
           gap: 40px;
         }
-
-
         /* Hamburger animation */
         .hamburger.active .bar:nth-child(1) {
           transform: translateY(7px) rotate(45deg);
         }
-
         .hamburger.active .bar:nth-child(2) {
           opacity: 0;
         }
-
         .hamburger.active .bar:nth-child(3) {
           transform: translateY(-7px) rotate(-45deg);
         }
@@ -182,17 +176,14 @@ nav ul li a:hover {
           font-size: 32px;
           line-height: 1.2;
         }
-
         .hero p {
           font-size: 16px;
           margin-bottom: 20px;
-        }
-  
+        }  
          /* Overriding background-attachment on mobile */
         .testimonials {
           background-attachment: scroll;
         }
-
         /* Padding adjustments for sections on mobile */
         .about,
         .services,
@@ -201,41 +192,40 @@ nav ul li a:hover {
         .contact {
           padding: 60px 20px;
         }
-
         .section-title {
           font-size: 28px;
         }
-
         /* Adjust .about-content for mobile */
         .about-content {
           flex-direction: column;
           gap: 40px;
         }
-
         /* Single column for services, process, etc. */
         .services-grid {
           grid-template-columns: 1fr;
         }
-
         .process-steps {
           grid-template-columns: 1fr;
         }
-
         .testimonial-grid {
           grid-template-columns: 1fr;
         }
-
-
         /* Footer stacks columns */
         .footer-content {
           flex-direction: column;
         }
-
+          /* 👉 ADD THIS HERE 👇 */
+            .services-grid,
+            .process-steps,
+            .testimonial-grid {
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 30px;
+            }
         .footer-column {
           margin-bottom: 30px;
           padding-right: 0;
         }
-
 }
 @media (min-width: 769px) {
   #mobile-menu, .menu-overlay {
