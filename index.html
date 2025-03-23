@@ -1,24 +1,11 @@
-<nav class="navbar">
-    <div class="hamburger" onclick="toggleNav()" aria-label="Toggle navigation">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
-    <ul class="nav-list">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>RENTSOS408 | Curated Sourcing. Seamless Shipment</title>
-
-  <!-- External CSS -->
+    
+<!-- External CSS -->
   <link rel="stylesheet" href="styles.css" />
 
   <!-- Font Awesome -->
@@ -43,26 +30,26 @@
       <!-- Logo -->
       <div class="logo">RENTSOS408</div>
 
-     <!-- Hamburger icon -->
-    <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
+      <!-- Hamburger icon -->
+      <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
 
-      <!-- Collapsible Nav -->
+      <!-- Mobile Menu -->
       <nav id="mobile-menu">
         <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#process">Our Process</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
-
+    
   <!-- Hero Section -->
   <section class="hero">
     <div class="container hero-content">
@@ -443,49 +430,49 @@
       <!-- Script: Toggling the Mobile Nav -->
 
 <script>
-  // Get elements
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const menuOverlay = document.getElementById('menu-overlay');
-  const navLinks = document.querySelectorAll('#mobile-menu a');
-  
-  // Toggle menu function
-  function toggleMenu() {
-    hamburger.classList.toggle('active');
-    mobileMenu.classList.toggle('active');
-    menuOverlay.classList.toggle('active');
+    // Get elements
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuOverlay = document.getElementById('menu-overlay');
+    const navLinks = document.querySelectorAll('#mobile-menu a');
     
-    // Prevent scrolling when menu is open
-    if (mobileMenu.classList.contains('active')) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
+    // Toggle menu function
+    function toggleMenu() {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      menuOverlay.classList.toggle('active');
+      
+      // Prevent scrolling when menu is open
+      if (mobileMenu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
     }
-  }
-  
-  // Event listeners
-  hamburger.addEventListener('click', toggleMenu);
-  menuOverlay.addEventListener('click', toggleMenu);
-  
-  // Close menu when clicking a link (mobile only)
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth <= 768) {
-        toggleMenu();
+    
+    // Event listeners
+    hamburger.addEventListener('click', toggleMenu);
+    menuOverlay.addEventListener('click', toggleMenu);
+    
+    // Close menu when clicking a link (mobile only)
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          toggleMenu();
+        }
+      });
+    });
+    
+    // Handle resize events
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768 && mobileMenu.classList.contains('active')) {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
       }
     });
-  });
-  
-  // Handle resize events
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 768 && mobileMenu.classList.contains('active')) {
-      hamburger.classList.remove('active');
-      mobileMenu.classList.remove('active');
-      menuOverlay.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-  });
-</script>
+  </script>
     
 </body>
 </html>
