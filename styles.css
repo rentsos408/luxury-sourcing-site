@@ -238,7 +238,7 @@ menu-overlay.active {
           padding-right: 0;
         }
 }
-
+}
 @media (min-width: 769px) {
   #mobile-menu, .menu-overlay {
     display: none;
