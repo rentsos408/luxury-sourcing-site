@@ -152,90 +152,91 @@ menu-overlay.active {
 /* Mobile-specific adjustments */
 @media (max-width: 768px) {
 
-  /* Hide desktop nav on mobile */
-  nav ul {
-    display: none;
-  }
+        /* Hide desktop nav on mobile */
+        nav ul {
+          display: none;
+        }
 
-  /* Show hamburger button */
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+        /* Show hamburger button */
+        .hamburger {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
 
-  /* Hamburger animation */
-  .hamburger.active .bar:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-  }
+        /* Hamburger animation */
+        .hamburger.active .bar:nth-child(1) {
+          transform: translateY(7px) rotate(45deg);
+        }
 
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
+        .hamburger.active .bar:nth-child(2) {
+          opacity: 0;
+        }
 
-  .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-  }
- /* Hero Font Adjustments */
-  .hero h1 {
-    font-size: 32px;
-    line-height: 1.2;
-  }
+        .hamburger.active .bar:nth-child(3) {
+          transform: translateY(-7px) rotate(-45deg);
+        }
+       /* Hero Font Adjustments */
+        .hero h1 {
+          font-size: 32px;
+          line-height: 1.2;
+        }
 
-  .hero p {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-   /* Overriding background-attachment on mobile */
-  .testimonials {
-    background-attachment: scroll;
-  }
+        .hero p {
+          font-size: 16px;
+          margin-bottom: 20px;
+        }
+  
+         /* Overriding background-attachment on mobile */
+        .testimonials {
+          background-attachment: scroll;
+        }
 
-  /* Padding adjustments for sections on mobile */
-  .about,
-  .services,
-  .process,
-  .testimonials,
-  .contact {
-    padding: 60px 20px;
-  }
+        /* Padding adjustments for sections on mobile */
+        .about,
+        .services,
+        .process,
+        .testimonials,
+        .contact {
+          padding: 60px 20px;
+        }
 
-  .section-title {
-    font-size: 28px;
-  }
+        .section-title {
+          font-size: 28px;
+        }
 
-  /* Adjust .about-content for mobile */
-  .about-content {
-    flex-direction: column;
-    gap: 40px;
-  }
+        /* Adjust .about-content for mobile */
+        .about-content {
+          flex-direction: column;
+          gap: 40px;
+        }
 
-  /* Single column for services, process, etc. */
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
+        /* Single column for services, process, etc. */
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
 
-  .process-steps {
-    grid-template-columns: 1fr;
-  }
+        .process-steps {
+          grid-template-columns: 1fr;
+        }
 
-  .testimonial-grid {
-    grid-template-columns: 1fr;
-  }
+        .testimonial-grid {
+          grid-template-columns: 1fr;
+        }
 
-  .contact-content {
-    flex-direction: column;
-  }
+        .contact-content {
+          flex-direction: column;
+        }
 
-  /* Footer stacks columns */
-  .footer-content {
-    flex-direction: column;
-  }
+        /* Footer stacks columns */
+        .footer-content {
+          flex-direction: column;
+        }
 
-  .footer-column {
-    margin-bottom: 30px;
-    padding-right: 0;
-  }
+        .footer-column {
+          margin-bottom: 30px;
+          padding-right: 0;
+        }
 }
 
 @media (min-width: 769px) {
@@ -596,124 +597,66 @@ footer {
   padding-bottom: 10px;
 }
 
-.footer-heading::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 40px;
-  height: 2px;
-  background-color: var(--accent-color);
-}
-
-.footer-links {
-  list-style: none;
-}
-
-.footer-links li {
-  margin-bottom: 10px;
-}
-
-.footer-links a {
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.7);
-  transition: color 0.3s;
-  font-size: 14px;
-}
-
-.footer-links a:hover {
-  color: var(--accent-color);
-}
-
-.social-links {
-  display: flex;
-  gap: 15px;
-}
-
-.social-link {
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  transition: background-color 0.3s;
-  text-decoration: none;
-}
-
-.social-link:hover {
-  background-color: var(--accent-color);
-}
-
-.footer-bottom {
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  text-align: center;
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
-}
-
-  
-  /* Hero Font Adjustments */
-  .hero h1 {
-    font-size: 32px;
-    line-height: 1.2;
+  .footer-heading::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--accent-color);
   }
 
-  .hero p {
-    font-size: 16px;
-    margin-bottom: 20px;
+  .footer-links {
+    list-style: none;
   }
 
-  /* Overriding background-attachment on mobile */
-  .testimonials {
-    background-attachment: scroll;
+  .footer-links li {
+    margin-bottom: 10px;
   }
 
-  /* Padding adjustments for sections on mobile */
-  .about,
-  .services,
-  .process,
-  .testimonials,
-  .contact {
-    padding: 60px 20px;
+  .footer-links a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s;
+    font-size: 14px;
   }
 
-  .section-title {
-    font-size: 28px;
+  .footer-links a:hover {
+    color: var(--accent-color);
   }
 
-  /* Adjust .about-content for mobile */
-  .about-content {
-    flex-direction: column;
-    gap: 40px;
+  .social-links {
+    display: flex;
+    gap: 15px;
   }
 
-  /* Single column for services, process, etc. */
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-  .process-steps {
-    grid-template-columns: 1fr;
-  }
-  .testimonial-grid {
-    grid-template-columns: 1fr;
-  }
-  .contact-content {
-    flex-direction: column;
+  .social-link {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: background-color 0.3s;
+    text-decoration: none;
   }
 
-  /* Footer stacks columns */
-  .footer-content {
-    flex-direction: column;
+  .social-link:hover {
+    background-color: var(--accent-color);
   }
-  .footer-column {
-    margin-bottom: 30px;
-    padding-right: 0;
+
+  .footer-bottom {
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
   }
-}
+
+ 
 
 
 
