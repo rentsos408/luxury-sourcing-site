@@ -436,6 +436,19 @@
   function toggleNav() {
     document.getElementById('mobile-menu').classList.toggle('active');
   }
+
+  // Get all the links inside the mobile menu
+  const mobileLinks = document.querySelectorAll('#mobile-menu ul li a');
+
+  // Add an event listener to each link
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      // If the menu is open (has the 'active' class), close it
+      if (document.getElementById('mobile-menu').classList.contains('active')) {
+        document.getElementById('mobile-menu').classList.remove('active');
+      }
+    });
+  });
 </script>
 </body>
 </html>
