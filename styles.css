@@ -535,21 +535,11 @@ footer {
    MEDIA QUERIES
 ------------------------------------ */
 /* --- MOBILE (up to 768px) --- */
-@media (max-width: 768px) {
-  /* Show hamburger on mobile */
-  .hamburger {
-    display: block;
-  }
 
-  /* Hide nav by default on mobile, toggled by JS */
-  #mobile-menu {
+
+/* Hide desktop nav on mobile */
+  .navbar {
     display: none;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    width: 200px;
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   }
 
   /* Hero Font Adjustments */
@@ -562,7 +552,37 @@ footer {
     font-size: 16px;
     margin-bottom: 20px;
   }
+/* #mobile-menu is hidden by default, JS will toggle 'active' class */
+  #mobile-menu {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    padding: 10px;
+  }
+  #mobile-menu.active {
+    display: block;
+  }
+  /* --- DESKTOP (from 769px) --- */
+@media (min-width: 769px) {
+  /* Hide hamburger on desktop */
+  .hamburger {
+    display: none;
+  }
 
+  /* Show desktop nav on desktop */
+  .navbar {
+    display: block;
+  }
+
+  /* Hide the mobile menu on desktop if you are using .navbar */
+  #mobile-menu {
+    display: none;
+  }
+}
   /* Overriding background-attachment on mobile */
   .testimonials {
     background-attachment: scroll;
