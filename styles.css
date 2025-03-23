@@ -9,7 +9,6 @@
   display: flex;
   list-style: none;
 }
-
 @media (max-width: 768px) {
   .desktop-nav ul {
     display: none;
@@ -43,7 +42,6 @@ h5 {
   margin: 0 auto;
   padding: 0 20px;
 }
-
 /* General Styles for header & navigation */
 header {
   background-color: white;
@@ -67,18 +65,14 @@ header {
   letter-spacing: 2px;
   color: var(--primary-color);
 }
-
-
 /* Desktop Navigation - visible on desktop only */
   nav ul {
   display: flex;
   list-style: none;
 }
-
 nav ul li {
   margin-left: 40px;
 }
-
 nav ul li a {
   text-decoration: none;
   color: var(--text-color);
@@ -88,12 +82,9 @@ nav ul li a {
   font-weight: 500;
   transition: color 0.3s;
 }
-
 nav ul li a:hover {
   color: var(--accent-color);
 }
-
-
 /* HAMBURGER mobile only */
   .hamburger {
   display: none;
@@ -106,8 +97,6 @@ nav ul li a:hover {
   background-color: var(--text-color);
   margin: 4px 0;
 }
-
-
 /* Mobile Menu (New) */
 #mobile-menu {
   position: fixed;
@@ -120,7 +109,6 @@ nav ul li a:hover {
   transition: transform 0.3s ease;
   z-index: 1500;
 }
-
 #mobile-menu ul {
   list-style: none;
   padding: 80px 20px;
@@ -134,11 +122,9 @@ nav ul li a:hover {
   text-decoration: none;
   color: var(--text-color);
 }
-
 #mobile-menu.active {
   transform: translateX(0);
 }
-
 /* Overlay for mobile menu */
  .menu-overlay {
   position: fixed;
@@ -152,7 +138,6 @@ nav ul li a:hover {
   visibility: hidden;
   transition: opacity 0.3s ease;
 }
-
   .menu-overlay.active {
   opacity: 1;
   visibility: visible;
@@ -234,7 +219,7 @@ nav ul li a:hover {
   #mobile-menu, .menu-overlay {
     display: none;
   }
-}
+
       .services-grid,
       .process-steps,
       .testimonial-grid {
@@ -242,6 +227,7 @@ nav ul li a:hover {
         grid-template-columns: 1fr;
         gap: 30px !important;
  }
+}
 /* HERO */
 .hero {
   min-height: 100vh;
