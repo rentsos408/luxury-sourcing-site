@@ -156,13 +156,14 @@ nav ul li a:hover {
         nav ul {
           display: none;
         }
-
-        /* Show hamburger button */
-          .hamburger {
+  
+      /* Show hamburger button */
+        .contact-content {
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+          gap: 40px;
         }
+
 
         /* Hamburger animation */
         .hamburger.active .bar:nth-child(1) {
