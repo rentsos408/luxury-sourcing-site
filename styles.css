@@ -225,9 +225,6 @@ nav ul li a:hover {
           grid-template-columns: 1fr;
         }
 
-        .contact-content {
-          flex-direction: column;
-        }
 
         /* Footer stacks columns */
         .footer-content {
