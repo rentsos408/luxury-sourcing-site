@@ -164,12 +164,7 @@ nav ul li a:hover {
         nav ul {
           display: none;
         }
-       /* Force single-column layout for grids on mobile */
-      .services-grid,
-      .process-steps,
-      .testimonial-grid {
-      grid-template-columns: 1fr !important;
-    }
+      
       .process-step,
         .testimonial-card {
           width: 100%;
