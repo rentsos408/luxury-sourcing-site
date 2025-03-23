@@ -251,7 +251,7 @@ nav ul li a:hover {
       .process-steps,
       .testimonial-grid {
         display: grid !important;
-        fgrid-template-columns: 1fr;
+        grid-template-columns: 1fr;
         gap: 30px !important;
  }
 /* HERO */
