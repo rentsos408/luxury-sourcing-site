@@ -90,36 +90,6 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-/* MOBILE MENU (hidden by default, toggled by JS on mobile) */
-#mobile-menu {
-  display: none;
-  position: absolute;
-  right: 20px;
-  top: 60px; /* adjust if your header is taller */
-  width: 200px;
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  z-index: 999;
-  padding: 10px;
-}
-
-#mobile-menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-#mobile-menu ul li a {
-  display: block;
-  padding: 10px 0;
-  color: var(--text-color);
-  text-decoration: none;
-}
-/* Add this rule */
-#mobile-menu.active {
-  display: block;
-}
-
 /* HERO */
 .hero {
   min-height: 100vh;
@@ -532,14 +502,48 @@ footer {
 }
 
 /* ------------------------------------
-   MEDIA QUERIES
+  MEDIA QUERIES
 ------------------------------------ */
 /* --- MOBILE (up to 768px) --- */
+@media (max-width: 768px) {
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: block;
+  }
 
-
-/* Hide desktop nav on mobile */
+  /* Hide desktop nav on mobile */
   .navbar {
     display: none;
+  }
+
+  /* Mobile menu styles (initially hidden) */
+  #mobile-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    padding: 10px;
+  }
+
+  #mobile-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #mobile-menu ul li a {
+    display: block;
+    padding: 10px 0;
+    color: var(--text-color);
+    text-decoration: none;
+  }
+
+  #mobile-menu.active {
+    display: block;
   }
 
   /* Hero Font Adjustments */
@@ -552,37 +556,7 @@ footer {
     font-size: 16px;
     margin-bottom: 20px;
   }
-/* #mobile-menu is hidden by default, JS will toggle 'active' class */
-  #mobile-menu {
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    width: 200px;
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    z-index: 999;
-    padding: 10px;
-  }
-  #mobile-menu.active {
-    display: block;
-  }
-  /* --- DESKTOP (from 769px) --- */
-@media (min-width: 769px) {
-  /* Hide hamburger on desktop */
-  .hamburger {
-    display: none;
-  }
 
-  /* Show desktop nav on desktop */
-  .navbar {
-    display: block;
-  }
-
-  /* Hide the mobile menu on desktop if you are using .navbar */
-  #mobile-menu {
-    display: none;
-  }
-}
   /* Overriding background-attachment on mobile */
   .testimonials {
     background-attachment: scroll;
@@ -633,45 +607,18 @@ footer {
 
 /* --- DESKTOP (from 769px) --- */
 @media (min-width: 769px) {
+  /* Hide hamburger on desktop */
   .hamburger {
     display: none;
   }
 
-  /* Show nav on desktop */
-  #mobile-menu {
+  /* Show desktop nav on desktop */
+  .navbar {
     display: block;
-    position: static;
-    box-shadow: none;
-    background-color: transparent;
-    width: auto;
-    padding: 0;
   }
 
-  #mobile-menu ul {
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
-  }
-
-  #mobile-menu ul li a {
-    display: inline-block;
-    padding: 0;
-  }
-
- @media (max-width: 768px) {
+  /* Hide the mobile menu on desktop */
   #mobile-menu {
     display: none;
-    position: absolute;
-    top: 60px; /* Adjust this value if your header height is different */
-    right: 20px;
-    width: 200px;
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    z-index: 999; /* Make sure it's on top */
-    padding: 10px;
-    /* Maybe add a max-height and overflow-y if you have many links */
-    /* max-height: 80vh;
-    overflow-y: auto; */
   }
 }
