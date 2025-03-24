@@ -45,8 +45,10 @@
       <span class="bar"></span>
       <span class="bar"></span>
     </div>
-  <!-- Mobile Menu (initially hidden) -->
-  <div id="mobile-menu">
+  </div> <!-- ✅ properly closes header-container -->
+
+  <!-- ✅ Mobile Menu goes here, outside of the container but still inside header -->
+  <nav id="mobile-menu">
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
@@ -54,8 +56,8 @@
       <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-  </div>
-</header> 
+  </nav>
+</header>
   <!-- Hero Section -->
   <section class="hero">
     <div class="container hero-content">
