@@ -5,6 +5,9 @@
   --text-color: #2C2C2C;
   --light-text: #F5F2EE;
 }
+html {
+  scroll-behavior: smooth;
+}
 .desktop-nav ul {
   display: flex;
   list-style: none;
