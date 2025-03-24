@@ -30,7 +30,7 @@
     <!-- Desktop Menu -->
     <nav class="desktop-nav">
       <ul>
-        <li><a href="#about">About</a></li>
+        <li><a href="#">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#process">Our Process</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
@@ -458,10 +458,8 @@
                 // Mobile menu links - you had this section twice
                 mobileMenuLinks.forEach(link => {
                   link.addEventListener('click', (e) => {
-                    // Small delay to allow the smooth scroll to start
-                    setTimeout(() => {
+              // Allow the browser's default behavior (scrolling to the section)
                       toggleMenu();
-                    }, 300);
                   });
                 });
                 
@@ -475,16 +473,7 @@
                   }
                 });
               });
-    </script>    
-        <script>
-          document.addEventListener('DOMContentLoaded', function () {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const nav = document.querySelector('nav ul');
-        
-            menuToggle.addEventListener('click', function () {
-              nav.classList.toggle('showing');
-            });
-          });
+
         </script>
   
 </body>
