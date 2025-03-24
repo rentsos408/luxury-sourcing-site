@@ -97,6 +97,8 @@ nav ul li a:hover {
   .hamburger {
   display: none;
   cursor: pointer;
+  position: relative;
+  z-index: 1600;
 }
  .hamburger .bar {
   display: block;
