@@ -133,6 +133,9 @@ nav ul li a:hover {
 #mobile-menu ul {
   list-style: none;
   padding: 80px 20px;
+  display: flex;  /* Ensures proper display */
+  flex-direction: column; /* Stacks menu items vertically */
+  align-items: center; /* Centers menu items */
 }
 
 #mobile-menu ul li a {
