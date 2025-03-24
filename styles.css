@@ -70,8 +70,11 @@ header {
 
 .header-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; /* Ensures space between logo & menu */
+  align-items: center; /* Aligns items vertically */
+  max-width: 1200px; /* Optional: Adjusts width for better layout */
+  margin: 0 auto; /* Centers content */
+  padding: 0 20px; /* Ensures space on sides */
 }
 
 /* LOGO */
