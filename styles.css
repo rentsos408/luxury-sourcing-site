@@ -109,7 +109,7 @@ nav ul li a:hover {
   transition: transform 0.3s ease;
   z-index: 1500;
 }
-#mobile-nav.active {
+#mobile-menu.active {
   transform: translateX(0);
 }
 #mobile-menu ul {
