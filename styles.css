@@ -563,7 +563,9 @@ footer {
 
  /* Mobile-specific adjustments */
 @media (max-width: 768px) {
- 
+ .desktop-nav {
+    display: none;
+  }
   /* Overlay for mobile menu */
  .menu-overlay {
   position: fixed;
@@ -582,7 +584,6 @@ footer {
   visibility: visible;
 }
   /* Hide desktop nav on mobile */
-  
  .desktop-nav ul {
     display: none;
   }
