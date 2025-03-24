@@ -22,8 +22,11 @@ nav ul.showing {
 }
 
 .desktop-nav ul {
-  display: flex;
+  display: flex; /* Ensures items are in a row */
   list-style: none;
+  flex-direction: row; /* Ensures horizontal layout */
+  justify-content: flex-end;
+  gap: 20px; /* Adds spacing */
 }
 
 /* RESET & GLOBAL */
