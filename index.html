@@ -430,54 +430,49 @@
       </div>
     </div>
   </footer>
-
       <!-- Script: Toggling the Mobile Nav -->
-
-<script>
-    // Get elements
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuOverlay = document.getElementById('menu-overlay');
-    const navLinks = document.querySelectorAll('#mobile-menu a');
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuOverlay = document.getElementById('menu-overlay');
+      const navLinks = document.querySelectorAll('#mobile-menu a');
     
-    // Toggle menu function
-    function toggleMenu() {
-      hamburger.classList.toggle('active');
-      mobileMenu.classList.toggle('active');
-      menuOverlay.classList.toggle('active');
-      
-      // Prevent scrolling when menu is open
-      if (mobileMenu.classList.contains('active')) {
-        document.body.style.overflow = 'hidden';
-      } else {
-        document.body.style.overflow = '';
+      function toggleMenu() {
+        hamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
+    
+        if (mobileMenu.classList.contains('active')) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
       }
-    }
     
-    // Event listeners
-    hamburger.addEventListener('click', toggleMenu);
-    menuOverlay.addEventListener('click', toggleMenu);
+      // Toggle open/close
+      hamburger.addEventListener('click', toggleMenu);
+      menuOverlay.addEventListener('click', toggleMenu);
     
-    // Close menu when clicking a link (mobile only)
-navLinks.forEach(link => {
-  link.addEventListener('click', (e) => {
-    if (window.innerWidth <= 768) {
-      setTimeout(toggleMenu, 100); // delay avoids scroll interference
-    }
-  });
-});
-
+      // ✅ Delay closing menu after scroll starts
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 768) {
+            setTimeout(() => {
+              toggleMenu();
+            }, 300); // delay to allow smooth scroll
+          }
+        });
+      });
     
-    // Handle resize events
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 768 && mobileMenu.classList.contains('active')) {
-        hamburger.classList.remove('active');
-        mobileMenu.classList.remove('active');
-        menuOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-    });
-  </script>
-    
+      // Close menu if resized to desktop
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && mobileMenu.classList.contains('active')) {
+          hamburger.classList.remove('active');
+          mobileMenu.classList.remove('active');
+          menuOverlay.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+    </script>    
 </body>
 </html>
