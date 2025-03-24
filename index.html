@@ -435,8 +435,7 @@
       const hamburger = document.getElementById('hamburger');
       const mobileMenu = document.getElementById('mobile-menu');
       const menuOverlay = document.getElementById('menu-overlay');
-      const navLinks = document.querySelectorAll('#mobile-menu a');
-    
+      const navLinks = document.querySelectorAll('a[href^="#"]');
       function toggleMenu() {
         hamburger.classList.toggle('active');
         mobileMenu.classList.toggle('active');
