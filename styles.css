@@ -5,6 +5,23 @@
   --text-color: #2C2C2C;
   --light-text: #F5F2EE;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: #ffffff;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -12,6 +29,7 @@ html {
 section {
   scroll-margin-top: 100px; /* adjust if your fixed header is taller or shorter */
 }
+
 nav ul {
   display: none;
   flex-direction: column;
