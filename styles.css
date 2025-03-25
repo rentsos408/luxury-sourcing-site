@@ -75,7 +75,7 @@ h5 {
   margin: 0 auto;
   padding: 0 20px;
 }
-/* General Styles for header & navigation */
+
 header {
   background-color: white;
   padding: 20px 0;
@@ -86,25 +86,38 @@ header {
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
+/* General Styles for header & navigation */
+
 .header-container {
   display: flex;
-  justify-content: space-between; /* Ensures space between logo & menu */
-  align-items: center; /* Aligns items vertically */
-  max-width: 1200px; /* Optional: Adjusts width for better layout */
-  margin: 0 auto; /* Centers content */
-  padding: 0 20px; /* Ensures space on sides */
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-
 /* LOGO */
 .logo {
   font-size: 28px;
   letter-spacing: 2px;
   color: var(--primary-color);
 }
-/* Desktop Navigation - visible on desktop only */
-  nav ul {
+/* DESKTOP NAVIGATION */
+.desktop-nav ul {
   display: flex;
   list-style: none;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 20px;
+}
+.desktop-nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 nav ul li {
   margin-left: 40px;
@@ -120,6 +133,25 @@ nav ul li a {
 }
 nav ul li a:hover {
   color: var(--accent-color);
+}
+
+hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 30px;
+  height: 24px;
+  position: relative;
+  z-index: 1600;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: var(--text-color);
+  margin: 4px 0;
 }
 /* HAMBURGER mobile only */
  /* .hamburger { */
