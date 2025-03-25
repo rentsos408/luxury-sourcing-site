@@ -456,7 +456,11 @@
             ? 'hidden' 
             : 'auto';
     }
-
+      function toggleMenu() {
+          mobileMenu.classList.toggle("active");
+          menuOverlay.classList.toggle("active");
+          document.body.style.overflow = mobileMenu.classList.contains("active") ? "hidden" : "auto";
+        }
     hamburger.addEventListener('click', toggleMenu);
     menuOverlay.addEventListener('click', toggleMenu);
 
