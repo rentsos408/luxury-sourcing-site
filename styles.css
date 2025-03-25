@@ -226,13 +226,11 @@ nav ul li a:hover {
   #mobile-menu, .menu-overlay {
     display: none;
   }
-
   .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
-
   .process-steps {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -245,7 +243,6 @@ nav ul li a:hover {
     gap: 40px;
   }
 }
-
 /* HERO */
 .hero {
   min-height: 100vh;
@@ -337,13 +334,6 @@ nav ul li a:hover {
   max-width: 800px;
   margin: 0 auto 60px;
 }
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
 .service-card {
   background-color: var(--secondary-color);
   padding: 40px 30px;
@@ -383,13 +373,6 @@ nav ul li a:hover {
   max-width: 800px;
   margin: 0 auto 60px;
 }
-
-.process-steps {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-}
-
 .process-step {
   text-align: center;
   position: relative;
@@ -448,18 +431,11 @@ nav ul li a:hover {
   margin: 0 auto 60px;
 }
 
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-}
-
 .testimonial-card {
   background-color: var(--secondary-color);
   padding: 40px;
   position: relative;
 }
-
 .testimonial-text {
   font-style: italic;
   margin-bottom: 20px;
