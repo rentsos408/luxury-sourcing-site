@@ -435,48 +435,50 @@
       <!-- Script: Toggling the Mobile Nav -->
 
 <script>
-    // Get elements
+  document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuOverlay = document.getElementById('menu-overlay');
-    const navLinks = document.querySelectorAll('#mobile-menu a');
     
-    // Toggle menu function
-    function toggleMenu() {
-      hamburger.classList.toggle('active');
-      mobileMenu.classList.toggle('active');
-      menuOverlay.classList.toggle('active');
-      
-      // Prevent scrolling when menu is open
-      if (mobileMenu.classList.contains('active')) {
-        document.body.style.overflow = 'hidden';
-      } else {
-        document.body.style.overflow = '';
-      }
+    if (!hamburger || !mobileMenu || !menuOverlay) {
+        console.error('Navigation elements not found');
+        return;
     }
-    
-    // Event listeners
+
+    function toggleMenu() {
+        hamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
+        
+        // Prevent scrolling when menu is open
+        document.body.style.overflow = mobileMenu.classList.contains('active') 
+            ? 'hidden' 
+            : 'auto';
+    }
+
     hamburger.addEventListener('click', toggleMenu);
     menuOverlay.addEventListener('click', toggleMenu);
-    
-    // Close menu when clicking a link (mobile only)
+
+    // Close menu when a nav link is clicked
+    const navLinks = document.querySelectorAll('#mobile-menu a');
     navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        if (window.innerWidth <= 768) {
-          toggleMenu();
-        }
-      });
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                toggleMenu();
+            }
+        });
     });
-    
-    // Handle resize events
+
+    // Reset on window resize
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 768 && mobileMenu.classList.contains('active')) {
-        hamburger.classList.remove('active');
-        mobileMenu.classList.remove('active');
-        menuOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-      }
+        if (window.innerWidth > 768) {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
     });
+});
   </script>
     
 </body>
