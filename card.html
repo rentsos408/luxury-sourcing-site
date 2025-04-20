@@ -72,8 +72,30 @@
       margin-top: 20px;
     }
 
-    .contact-section p {
-      margin-bottom: 8px;
+    .qr-code {
+      margin: 30px 0 10px;
+    }
+
+    .qr-code img {
+      width: 120px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #5A3921;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .download-btn:hover {
+      background-color: #3e2715;
     }
   </style>
 </head>
@@ -94,6 +116,15 @@
       <p><a href="mailto:concierge@rentsos408.com">concierge@rentsos408.com</a></p>
       <p><a href="https://rentsos408.com" target="_blank">www.rentsos408.com</a></p>
     </div>
+
+    <!-- QR Code -->
+    <div class="qr-code">
+      <img src="qrcode.png" alt="Scan to open card" />
+      <p style="font-size: 12px; margin-top: 5px;">Scan to view this card online</p>
+    </div>
+
+    <!-- vCard Button -->
+    <a href="JannetteMock.vcf" class="download-btn" download>📇 Download My Contact</a>
   </div>
 </body>
 </html>
