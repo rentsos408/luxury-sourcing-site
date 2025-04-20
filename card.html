@@ -1,17 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Card | RENTSOS408</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: #f4f1ed;
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 40px 30px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .brand img {
+      height: 45px;
+    }
+
+    .brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: #5A3921;
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      margin: 10px 0 0;
+      color: #2d1c0f;
+    }
+
+    p {
+      font-size: 14px;
+      color: #555;
+      margin: 5px 0;
+    }
+
+    a {
+      color: #5A3921;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-section {
+      margin-top: 20px;
+    }
+
+    .contact-section p {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
 <body>
   <div class="card">
-    <!-- Logo and Brand Name -->
-    <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 15px;">
-      <img src="logo6.png" alt="RENTSOS408 logo" style="height: 40px;" />
-      <span style="font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 20px; color: #2d1c0f;">
-        RENTSOS408
-      </span>
+    <!-- Brand Logo and Name -->
+    <div class="brand">
+      <img src="logo6.png" alt="RENTSOS408 Logo">
+      <span class="brand-name">RENTSOS408</span>
     </div>
 
-    <!-- Personal Info -->
+    <!-- Personal Name & Title -->
     <h2>Jannette Mock</h2>
-    <p>Project Manager, RENTSOS408</p>
-    <p><a href="mailto:concierge@rentsos408.com">concierge@rentsos408.com</a></p>
-    <p><a href="https://rentsos408.com" target="_blank">Visit Website</a></p>
+    <p>Founder, Global Sourcing Expert</p>
+
+    <!-- Contact Info -->
+    <div class="contact-section">
+      <p><a href="mailto:concierge@rentsos408.com">concierge@rentsos408.com</a></p>
+      <p><a href="https://rentsos408.com" target="_blank">www.rentsos408.com</a></p>
+    </div>
   </div>
 </body>
+</html>
