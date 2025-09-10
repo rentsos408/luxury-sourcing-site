@@ -494,34 +494,58 @@
     });
 });
   </script>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('contact-form');
-  if (!form) return;
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const name    = document.getElementById('name')?.value.trim() || '';
-    const email   = document.getElementById('email')?.value.trim() || '';
-    const subject = document.getElementById('subject')?.value.trim() || 'New enquiry from RENTSOS408';
-    const message = document.getElementById('message')?.value.trim() || '';
-
-    const body = [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      '',
-      'Message:',
-      message
-    ].join('\n');
-
-    const mailto = `mailto:rentsos408@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-    // Open the user's email client with the message pre-filled
-    window.location.href = mailto;
-  });
-});
-</script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('contact-form');
+      const confirmationMessage = document.getElementById('confirmation-message');
+      
+      if (!form) return;
+    
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+    
+        const name = document.getElementById('name')?.value.trim() || '';
+        const email = document.getElementById('email')?.value.trim() || '';
+        const subject = document.getElementById('subject')?.value.trim() || 'New enquiry from RENTSOS408';
+        const message = document.getElementById('message')?.value.trim() || '';
+    
+        // Add validation
+        if (!name || !email || !message) {
+          alert('Please fill in all required fields (Name, Email, and Message).');
+          return;
+        }
+    
+        const body = [
+          `Name: ${name}`,
+          `Email: ${email}`,
+          '',
+          'Message:',
+          message
+        ].join('\n');
+    
+        const mailto = `mailto:rentsos408@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+        // Open the user's email client with the message pre-filled
+        window.location.href = mailto;
+        
+        // Show confirmation message (NEW)
+        if (confirmationMessage) {
+          confirmationMessage.style.display = 'block';
+          confirmationMessage.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Clear form (NEW)
+        form.reset();
+        
+        // Hide message after 10 seconds (NEW)
+        setTimeout(() => {
+          if (confirmationMessage) {
+            confirmationMessage.style.display = 'none';
+          }
+        }, 10000);
+      });
+    });
+    </script>
 
   
 </body>
