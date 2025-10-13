@@ -130,7 +130,7 @@ nav ul li a:hover {
   left: 0; /* snap into place immediately */
   transform: translateX(0);
   opacity: 1
-
+}
 /* Overlay for mobile menu */
  .menu-overlay {
   position: fixed;
