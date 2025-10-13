@@ -243,6 +243,46 @@
     </div>
   </section>
 
+<!-- Quote Section -->
+<section id="quote" class="quote">
+  <div class="container">
+    <h2 class="section-title">Get a Quote & Draft Docs</h2>
+    <p>Tell us the basics. We’ll draft your Commercial Invoice & Packing List instantly for review.</p>
+
+    <form id="quoteForm" action="/api/quote" method="POST" enctype="multipart/form-data" class="quote-form">
+      <div class="form-row">
+        <label>Full name <input name="fullName" required></label>
+        <label>Email <input name="email" type="email" required></label>
+        <label>Phone <input name="phone" required></label>
+      </div>
+
+      <div class="form-row">
+        <label>Origin (City, Country) <input name="origin" required></label>
+        <label>Destination (City, Country) <input name="destination" required></label>
+        <label>Incoterm
+          <select name="incoterm" required>
+            <option>FOB</option><option>CIF</option><option>EXW</option><option>DDP</option>
+          </select>
+        </label>
+      </div>
+
+      <label>Itemized lines (one per line)
+        <textarea name="itemLines" rows="6" placeholder="SKU | Qty | Weight kg | Description" required></textarea>
+      </label>
+
+      <label>Supplier invoice / packing list (optional)
+        <input type="file" name="supportingDoc" accept=".pdf,.jpg,.jpeg,.png">
+      </label>
+
+      <label>Special handling / notes
+        <textarea name="notes" rows="3"></textarea>
+      </label>
+
+      <button type="submit" class="cta-btn">Generate Draft</button>
+      <div id="quoteResult" style="margin-top:12px;"></div>
+    </form>
+  </div>
+</section>  
   <!-- Testimonials Section -->
   <section id="testimonials" class="testimonials">
     <div class="container">
