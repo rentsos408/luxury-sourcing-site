@@ -456,22 +456,16 @@
     }
 
     function toggleMenu() {
-        hamburger.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
-        menuOverlay.classList.toggle('active');
-        
-        // Prevent scrolling when menu is open
-        document.body.style.overflow = mobileMenu.classList.contains('active') 
-            ? 'hidden' 
-            : 'auto';
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      menuOverlay.classList.toggle('active');
+      document.body.style.overflow = mobileMenu.classList.contains('active')
+        ? 'hidden'
+        : 'auto';
     }
-      function toggleMenu() {
-          mobileMenu.classList.toggle("active");
-          menuOverlay.classList.toggle("active");
-          document.body.style.overflow = mobileMenu.classList.contains("active") ? "hidden" : "auto";
-        }
     hamburger.addEventListener('click', toggleMenu);
     menuOverlay.addEventListener('click', toggleMenu);
+
 
     // Close menu when a nav link is clicked
     const navLinks = document.querySelectorAll('#mobile-menu a');
