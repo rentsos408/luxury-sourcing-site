@@ -581,6 +581,93 @@
     });
     </script>
 
+ <!-- Add this script RIGHT BEFORE the closing </body> tag in your HTML -->
+<!-- After your existing contact form script -->
+
+<script>
+// Quote Form Handler - AI-powered document generation
+document.addEventListener('DOMContentLoaded', function() {
+  const quoteForm = document.getElementById('quoteForm');
   
+  if (!quoteForm) {
+    console.warn('Quote form not found');
+    return;
+  }
+  
+  quoteForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const resultBox = document.getElementById('quoteResult');
+    const submitBtn = quoteForm.querySelector('button[type="submit"]');
+    
+    // Show loading state
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Generating...';
+    }
+    
+    if (resultBox) {
+      resultBox.innerHTML = '<p style="color: var(--accent-color);">⏳ Processing your request...</p>';
+    }
+    
+    try {
+      const formData = new FormData(quoteForm);
+      
+      // Submit to your backend API
+      const response = await fetch(quoteForm.action, {
+        method: 'POST',
+        body: formData
+      });
+      
+      const result = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to generate documents');
+      }
+      
+      // Success! Show download links
+      if (resultBox) {
+        resultBox.innerHTML = `
+          <div style="background-color: var(--secondary-color); padding: 20px; border-radius: 6px; border-left: 4px solid var(--accent-color);">
+            <h4 style="color: var(--primary-color); margin-bottom: 12px;">✓ Documents Generated Successfully!</h4>
+            <p style="margin-bottom: 12px;"><strong>Reference:</strong> ${result.ref}</p>
+            <p style="margin-bottom: 8px;"><strong>Download your drafts:</strong></p>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 8px;">
+                📄 <a href="${result.files.invoice}" target="_blank" rel="noopener" style="color: var(--accent-color); text-decoration: underline;">Commercial Invoice (PDF)</a>
+              </li>
+              <li>
+                📦 <a href="${result.files.packingList}" target="_blank" rel="noopener" style="color: var(--accent-color); text-decoration: underline;">Packing List (PDF)</a>
+              </li>
+            </ul>
+          </div>
+        `;
+      }
+      
+      // Reset form
+      quoteForm.reset();
+      
+    } catch (error) {
+      console.error('Quote generation error:', error);
+      
+      if (resultBox) {
+        resultBox.innerHTML = `
+          <div style="background-color: #fee; padding: 20px; border-radius: 6px; border-left: 4px solid #c00;">
+            <p style="color: #a00; margin: 0;">
+              <strong>Error:</strong> ${error.message || 'Failed to generate documents. Please try again or contact us directly.'}
+            </p>
+          </div>
+        `;
+      }
+    } finally {
+      // Reset button state
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Generate Draft';
+      }
+    }
+  });
+});
+</script> 
 </body>
 </html>
