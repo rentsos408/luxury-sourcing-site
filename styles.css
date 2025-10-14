@@ -688,13 +688,6 @@ footer {
     padding-right: 0;
   }
 
-
-   /* ===== Quote section (mobile-friendly) ===== */
-.quote {
-  padding: 80px 0;
-  background: #fff;
-}
-
 /* Center the title copy like your other sections */
 .quote .section-title {
   text-align: center;
@@ -764,6 +757,8 @@ footer {
   margin-top: 8px;
 }
 
+}
+
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .quote {
@@ -775,7 +770,5 @@ footer {
   .quote .cta-btn {
     width: 100%;
   }
-}
-
 }
 
