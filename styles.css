@@ -455,7 +455,7 @@ nav ul li a:focus-visible {
 .quote-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -464,17 +464,24 @@ nav ul li a:focus-visible {
 .quote-form .form-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 20px;
+  align-items: start;
 }
 
-/* Labels stack above inputs */
+/* Labels with inline text before input */
 .quote-form label {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+  display: block;
   font-size: 14px;
   font-weight: 500;
   color: var(--text-color);
+  line-height: 1.4;
+}
+
+.quote-form label input,
+.quote-form label select {
+  display: block;
+  margin-top: 6px;
+  width: 100%;
 }
 
 /* Input styling */
@@ -483,23 +490,22 @@ nav ul li a:focus-visible {
 .quote-form textarea {
   width: 100%;
   padding: 12px 14px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
   background: #fff;
   color: var(--text-color);
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 1.4;
   outline: none;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .quote-form input:focus,
 .quote-form select:focus,
 .quote-form textarea:focus {
   border-color: var(--accent-color);
-  outline: 2px solid var(--accent-color);
-  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(201, 171, 129, 0.1);
 }
 
 /* Textarea sizing */
