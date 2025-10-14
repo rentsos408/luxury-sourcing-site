@@ -248,9 +248,8 @@
   <div class="container">
     <h2 class="section-title">Get a Quote & Draft Docs</h2>
     <p>Tell us the basics. We’ll draft your Commercial Invoice & Packing List instantly for review.</p>
-
-    <form id="quoteForm" action="/api/quote" method="POST" enctype="multipart/form-data" class="quote-form">
-      <div class="form-row">
+    <form id="quoteForm" action="http://localhost:3000/api/quote" method="POST" enctype="multipart/form-data" class="quote-form">  
+    <div class="form-row">
         <label>Full name <input name="fullName" required></label>
         <label>Email <input name="email" type="email" required></label>
         <label>Phone <input name="phone" required></label>
@@ -625,24 +624,25 @@ document.addEventListener('DOMContentLoaded', function() {
         throw new Error(result.error || 'Failed to generate documents');
       }
       
-      // Success! Show download links
-      if (resultBox) {
-        resultBox.innerHTML = `
-          <div style="background-color: var(--secondary-color); padding: 20px; border-radius: 6px; border-left: 4px solid var(--accent-color);">
-            <h4 style="color: var(--primary-color); margin-bottom: 12px;">✓ Documents Generated Successfully!</h4>
-            <p style="margin-bottom: 12px;"><strong>Reference:</strong> ${result.ref}</p>
-            <p style="margin-bottom: 8px;"><strong>Download your drafts:</strong></p>
-            <ul style="list-style: none; padding: 0;">
-              <li style="margin-bottom: 8px;">
-                📄 <a href="${result.files.invoice}" target="_blank" rel="noopener" style="color: var(--accent-color); text-decoration: underline;">Commercial Invoice (PDF)</a>
-              </li>
-              <li>
-                📦 <a href="${result.files.packingList}" target="_blank" rel="noopener" style="color: var(--accent-color); text-decoration: underline;">Packing List (PDF)</a>
-              </li>
-            </ul>
-          </div>
-        `;
-      }
+  
+    // Success! Show download links
+        if (resultBox) {
+          resultBox.innerHTML = `
+            <div style="background-color: var(--secondary-color); padding: 20px; border-radius: 6px; border-left: 4px solid var(--accent-color);">
+              <h4 style="color: var(--primary-color); margin-bottom: 12px;">✓ Documents Generated Successfully!</h4>
+              <p style="margin-bottom: 12px;"><strong>Reference:</strong> ${result.ref}</p>
+              <p style="margin-bottom: 8px;"><strong>Download your drafts:</strong></p>
+              <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 8px;">
+                  📄 <a href="http://localhost:3000${result.files.invoice}" target="_blank" rel="noopener" style="color: var(--accent-color); text-decoration: underline;">Commercial Invoice (PDF)</a>
+                </li>
+                <li>
+                  📦 <a href="http://localhost:3000${result.files.packingList}" target="_blank" rel="noopener" style="color: var(--accent-color); text-decoration: underline;">Packing List (PDF)</a>
+                </li>
+              </ul>
+            </div>
+          `;
+        }
       
       // Reset form
       quoteForm.reset();
