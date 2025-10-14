@@ -430,6 +430,99 @@ nav ul li a:focus-visible {
 }
 
 /* ===================================
+   QUOTE/GET A QUOTE SECTION
+   =================================== */
+.quote {
+  padding: 100px 0;
+  background-color: #fff;
+}
+
+/* Center the title and intro text */
+.quote .section-title {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.quote > .container > p {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+/* Form layout */
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* 3 columns on desktop */
+.quote-form .form-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* Labels stack above inputs */
+.quote-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+/* Input styling */
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--text-color);
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.quote-form input:focus,
+.quote-form select:focus,
+.quote-form textarea:focus {
+  border-color: var(--accent-color);
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Textarea sizing */
+.quote-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* File input styling */
+.quote-form input[type="file"] {
+  padding: 10px;
+  background: var(--secondary-color);
+  border: 1px dashed rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Submit button */
+.quote .cta-btn {
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+/* ===================================
    CONTACT SECTION
    =================================== */
 .contact {
@@ -653,7 +746,8 @@ footer {
   .services,
   .process,
   .testimonials,
-  .contact {
+  .contact,
+  .quote {
     padding: 60px 20px;
   }
 
@@ -688,87 +782,13 @@ footer {
     padding-right: 0;
   }
 
-/* Center the title copy like your other sections */
-.quote .section-title {
-  text-align: center;
-  margin-bottom: 12px;
-}
-.quote > .container > p {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 24px;
-}
-
-/* Form layout */
-.quote-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-/* 3 columns on desktop, single column on mobile */
-.quote-form .form-row {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-}
-
-/* Labels stack input nicely */
-.quote-form label {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  font-size: 14px;
-  color: var(--text-color);
-}
-
-/* Inputs: iOS-friendly (>=16px prevents zoom) */
-.quote-form input,
-.quote-form select,
-.quote-form textarea {
-  width: 100%;
-  padding: 12px 14px;
-  border: 1px solid rgba(0,0,0,0.12);
-  border-radius: 6px;
-  background: #fff;
-  color: var(--text-color);
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;            /* <- important on iOS to prevent zoom */
-  line-height: 1.4;
-  outline: none;
-}
-
-/* Textarea sizing */
-.quote-form textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-/* File input – keep minimal */
-.quote-form input[type="file"] {
-  padding: 10px;
-  background: var(--secondary-color);
-  border: 1px dashed rgba(0,0,0,0.2);
-}
-
-/* Button full-width on mobile for easier tap */
-.quote .cta-btn {
-  align-self: flex-start;
-  margin-top: 8px;
-}
-
-}
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .quote {
-    padding: 60px 20px;
-  }
+  /* Quote form - single column on mobile */
   .quote-form .form-row {
     grid-template-columns: 1fr;
   }
+
   .quote .cta-btn {
     width: 100%;
+    text-align: center;
   }
 }
-
